@@ -52,7 +52,7 @@ export default function Projects() {
         "Node.js",
       ],
       liveUrl: "https://carmine-my.vercel.app/",
-      githubUrl: "https://github.com/TheDaniel3131/CarMine",
+      githubUrl: "https://github.com/danielpxh/CarMine",
       category: "web",
     },
     {
@@ -68,7 +68,7 @@ export default function Projects() {
         "Node.js",
       ],
       liveUrl: "https://myst3r10us.vercel.app/",
-      githubUrl: "https://github.com/TheDaniel3131/CTFTeam",
+      githubUrl: "https://github.com/danielpxh/CTFTeam",
       category: "web",
     },
     {
@@ -89,7 +89,7 @@ export default function Projects() {
       ],
       // liveUrl: "https://barkinglot.netlify.app",
       liveUrl: "#",
-      githubUrl: "https://github.com/TheDaniel3131/BarkingLot",
+      githubUrl: "https://github.com/danielpxh/BarkingLot",
       category: "web",
     },
     {
@@ -109,7 +109,7 @@ export default function Projects() {
         "AJAX",
       ],
       liveUrl: "#",
-      githubUrl: "https://github.com/TheDaniel3131/WDTAssignment",
+      githubUrl: "https://github.com/danielpxh/WDTAssignment",
       category: "web",
     },
     {
@@ -119,7 +119,7 @@ export default function Projects() {
       image: "/assets/project4.avif",
       technologies: ["Java", "MySQL"],
       liveUrl: "#",
-      githubUrl: "https://github.com/TheDaniel3131/SOFS-Java",
+      githubUrl: "https://github.com/danielpxh/SOFS-Java",
       category: "app",
     },
     {
@@ -129,7 +129,7 @@ export default function Projects() {
       image: "/assets/project5.avif",
       technologies: ["Python"],
       liveUrl: "#",
-      githubUrl: "https://github.com/TheDaniel3131/AirFlightSystem",
+      githubUrl: "https://github.com/danielpxh/AirFlightSystem",
       category: "app",
     },
   ];
