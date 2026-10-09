@@ -62,6 +62,40 @@ html {
   scroll-behavior: smooth;
 }
 
+/* A quiet grayscale bloom keeps the hero soft without tinting the theme. */
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(72px);
+}
+
+.hero-section::before {
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 28% 46%, rgba(148, 163, 184, 0.18), transparent 44%),
+    radial-gradient(ellipse at 74% 38%, rgba(71, 85, 105, 0.22), transparent 46%),
+    radial-gradient(ellipse at 54% 78%, rgba(203, 213, 225, 0.1), transparent 42%);
+  opacity: 0.32;
+}
+
+.hero-section::after {
+  top: 12%;
+  right: 8%;
+  width: clamp(240px, 36vw, 520px);
+  height: clamp(240px, 36vw, 520px);
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.12), transparent 70%);
+  opacity: 0.28;
+}
+
+.dark .hero-section::before,
+.dark .hero-section::after {
+  opacity: 0.72;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {

@@ -231,35 +231,36 @@ export default function Hero() {
   };
 
   return (
-    <div className="container mx-auto px-4 pt-16 sm:pt-20 md:pt-28 pb-4 sm:pb-6 md:pb-12">
-      <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-12">
+    <div className="hero-section relative isolate w-full">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 pb-6 sm:pb-8 md:pb-12">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-10 lg:gap-12">
         {/* Text Content */}
-        <div className="text-center md:text-left md:w-1/2 order-2 md:order-1">
-          <h1 className="font-bold mb-2 sm:mb-3 md:mb-4">
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <div className="text-center lg:text-left w-full lg:w-[54%] order-2 lg:order-1">
+          <h1 className="font-bold mb-3 sm:mb-4 md:mb-5">
+            <span className="block text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05]">
               Hello, I&apos;m
             </span>
-            <span className="text-[hsl(var(--primary))] whitespace-nowrap text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+            <span className="block whitespace-nowrap text-[hsl(var(--primary))] text-[clamp(1rem,6vw,3.5rem)] leading-[1.1] tracking-tight lg:text-[clamp(1.35rem,4.4vw,3.5rem)]">
               Daniel Poh Ting Fong
             </span>
           </h1>
 
-          <div className="h-6 sm:h-8 md:h-10 mb-3 sm:mb-4 md:mb-6">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-[hsl(var(--muted-foreground))] animate-fade-in">
+          <div className="min-h-8 sm:min-h-10 md:min-h-12 mb-4 sm:mb-5 md:mb-7">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-[hsl(var(--muted-foreground))] animate-fade-in">
               <span className="profession-text">{profession}</span>
             </h2>
           </div>
 
-          <p className="text-sm sm:text-base md:text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto md:mx-0 mb-4 sm:mb-6 md:mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-7 md:mb-9 leading-relaxed">
             I am a Software Engineer who is passionate about building projects
             and bringing ideas to life. Feel free to reach out for any
             inquiries.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
             <button
               onClick={scrollToContact}
-              className="px-4 sm:px-6 py-2 sm:py-3 bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] rounded-md font-medium flex items-center justify-center gap-2 hover:bg-[hsl(var(--primary))]/90 transition-colors text-sm sm:text-base"
+              className="px-5 sm:px-7 py-3 sm:py-3.5 bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] rounded-md font-medium flex items-center justify-center gap-2 hover:bg-[hsl(var(--primary))]/90 transition-colors text-base sm:text-lg"
             >
               Contact Me
               <ArrowRight className="h-4 w-4" />
@@ -268,21 +269,21 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-transparent border border-[hsl(var(--border))] rounded-md font-medium hover:bg-[hsl(var(--accent))] hover:text-[hsl(var(--accent-foreground))] transition-colors text-center text-sm sm:text-base"
+              className="flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 bg-transparent border border-[hsl(var(--border))] rounded-md font-medium hover:bg-[hsl(var(--accent))] hover:text-[hsl(var(--accent-foreground))] transition-colors text-center text-base sm:text-lg"
             >
               View Resume <ScanSearch className="h-4 w-4" />
             </a>
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-end w-full md:w-1/2 order-1 md:order-2">
+        <div className="flex justify-center lg:justify-end w-full lg:w-[40%] order-1 lg:order-2">
           <div className="relative">
             {/* Background decorative elements */}
             <div className="absolute -inset-2 sm:-inset-3 bg-gradient-to-r from-[hsl(var(--primary))]/20 to-[hsl(var(--primary))]/10 rounded-2xl blur-xl transform rotate-6 animate-pulse"></div>
             <div className="absolute -inset-1 sm:-inset-2 bg-[hsl(var(--primary))]/10 rounded-2xl transform -rotate-3"></div>
 
             {/* Main image container — bigger on mobile */}
-            <div className="relative w-[clamp(200px,75vw,320px)] h-[clamp(200px,75vw,320px)] sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+            <div className="relative w-[clamp(220px,76vw,360px)] h-[clamp(220px,76vw,360px)] sm:w-[clamp(300px,48vw,390px)] sm:h-[clamp(300px,48vw,390px)] lg:w-[clamp(380px,34vw,440px)] lg:h-[clamp(380px,34vw,440px)]">
               <div className="hero-image-container relative overflow-hidden rounded-2xl border-2 sm:border-4 border-[hsl(var(--primary))]/30 shadow-2xl bg-[hsl(var(--card))] w-full h-full">
                 {!imgError ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -338,6 +339,7 @@ export default function Hero() {
         >
           <ArrowDown className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
+      </div>
       </div>
     </div>
   );
