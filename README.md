@@ -25,16 +25,16 @@ Install the Playwright Chromium browser once:
 pnpm exec playwright install chromium
 ```
 
-Run the test:
+Run the focused responsive hero check:
 
 ```bash
-pnpm test:e2e
+pnpm test:hero
 ```
 
-To run the test with the Playwright UI:
+To run the check with the Playwright UI:
 
 ```bash
-pnpm test:e2e --ui
+pnpm test:hero --ui
 ```
 
 ## Production build
