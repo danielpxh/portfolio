@@ -13,20 +13,22 @@ import { useAnalytics } from "@/hooks/google-analytics/GoogleAnalytics";
 
 function App() {
   useAnalytics(import.meta.env.VITE_GA_MEASUREMENT_ID || "");
-  const [loading, setLoading] = useState(true);
 
+  const [loaderDone, setLoaderDone] = useState(false);
+  const [imageReady, setImageReady] = useState(false);
+  const loading = !loaderDone || !imageReady;
+
+  // Preload hero image — fires in parallel with the loader animation
   useEffect(() => {
-    if (loading) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-    return () => document.body.classList.remove("overflow-hidden");
-  }, [loading]);
+    const img = new Image();
+    img.src = "/assets/me-2-enhance8x.webp";
+    img.onload = () => setImageReady(true);
+    img.onerror = () => setImageReady(true);
+  }, []);
 
   return (
     <>
-      {loading && <Loader onDone={() => setLoading(false)} />}
+      {loading && <Loader onDone={() => setLoaderDone(true)} />}
       <div
         className={`min-h-screen bg-[hsl(var(--background))] transition-opacity duration-300 ${
           loading ? "opacity-0" : "opacity-100"
