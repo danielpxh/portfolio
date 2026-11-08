@@ -1,14 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script>
-      (function () {
-        const theme = localStorage.getItem("portfolio-theme");
-        if (theme === "dark" || (!theme && true)) {
-          document.documentElement.classList.add("dark");
-        }
-      })();
-    </script>
+    <script src="/theme-init.js"></script>
     <meta charset="UTF-8" />
 
     <!-- Favicon -->
@@ -74,23 +67,11 @@
 
     <!-- Preload Images -->
     <link rel="preload" as="image" href="/assets/me-2-enhance8x.webp" />
+    <script src="/analytics.js"></script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-C8HSJJ6TV8"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-C8HSJJ6TV8");
-  </script>
 </html>
